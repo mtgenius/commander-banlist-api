@@ -1,0 +1,29 @@
+{
+  "name": "commander-banlist-api",
+  "version": "1.0.0",
+  "author": "Charles Stover <webmaster@mtgeni.us>",
+  "bugs": {
+    "url": "https://github.com/mtgenius/commander-banlist-api/issues"
+  },
+  "description": "An API for querying the command banlists.",
+  "homepage": "https://github.com/mtgenius/commander-banlist-api#readme",
+  "keywords": [
+    "api",
+    "docker",
+    "node",
+    "nodejs"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtgenius/commander-banlist-api.git"
+  },
+  "scripts": {
+    "start": "set ACCESS_CONTROL_ALLOW_ORIGIN=*&& node src/index.js"
+  },
+  "dependencies": {
+    "https-proxy-agent": "^2.2.1",
+    "node-fetch": "^2.2.0"
+  }
+}
