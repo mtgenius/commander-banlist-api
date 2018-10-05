@@ -1,6 +1,10 @@
 const fixTypo = card => card.replace(/Divning/, 'Divining');
 
-const stripMarkup = card => fixTypo(card.match(/>(.+?)<$/)[1]);
+const stripMarkup = card =>
+  fixTypo(
+    card.match(/>(.+?)<$/)[1]
+      .replace(/&#8217;/, '\'')
+  );
 
 const matchDuel = html => {
 
