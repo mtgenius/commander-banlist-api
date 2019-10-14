@@ -1,2 +1,3 @@
-# commander-banlist-api
+# Commander Banlist API
+
 An API for querying the command banlists.
