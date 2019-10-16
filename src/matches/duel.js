@@ -31,7 +31,11 @@ const matchDuel = html => {
   for (const bannedCard of bannedCards.match(BANNED_CARD_REGEXP_G)) {
     const [, card] = bannedCard.match(BANNED_CARD_REGEXP);
     if (banned.indexOf(card) === -1) {
-      banned.push(card);
+      if (card === "Gaea's cradle") {
+        banned.push("Gaea's Cradle");
+      } else {
+        banned.push(card);
+      }
     }
   }
 
