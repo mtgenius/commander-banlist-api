@@ -1,5 +1,5 @@
 const stripMarkup = card =>
-  card.match(/>([^<]+?)(?:<\/a>)?<\/li>$/)[1].replace(/&amp;/, '&');
+  card.match(/>([^<]+?)(?:<\/span>)?(?:<\/a>)?<\/li>$/)[1].replace(/&amp;/, '&');
 
 const matchWotc = html => {
   // Get card list.
@@ -10,7 +10,7 @@ const matchWotc = html => {
 
   // Get cards from list.
   const cards = list[0].match(
-    /<li>(?:<a href=".+?" class="autocard-link" data-image-url=".+?">)?[^<]+?(?:<\/a>)?<\/li>/gi,
+    /<li>(?:<a href=".+?" class="autocard-link" data-image-url=".+?">)?(?:<span style=".+?">)?[^<]+?(?:<\/span>)?(?:<\/a>)?<\/li>/gi,
   );
   if (cards === null) {
     throw new Error('Could not find cards for WotC!');
