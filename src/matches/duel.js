@@ -1,6 +1,6 @@
-const BANNED_CARD_REGEXP = /\<li class=\"_2cuy _509q _2vxa\">(?:\<span class=\"_4yxr\"\>)?(.+?)(?:\<\/span\>)?\<\/li\>/;
+const BANNED_CARD_REGEXP = /\<li(?: class=\"_2cuy _509q _2vxa\")?>(?:\<span class=\"_4yxr\"\>)?(.+?)(?:\<\/span\>)?\<\/li\>/;
 
-const BANNED_COMMANDER_REGEXP = /\<li class=\"_2cuy _509q _2vxa\"\>(?:\<span class=\"_4yxr\"\>)?(.+?)(?:\<\/span\>)? is (?:now )?banned ?\<span class=\"_4yxo\"\> ?as as? commander only\.? ?\<\/span\>\.?\<\/li\>/;
+const BANNED_COMMANDER_REGEXP = /\<li(?: class=\"_2cuy _509q _2vxa\")?\>(?:\<span class=\"_4yxr\"\>)?(.+?)(?:\<\/span\>)? is (?:now )?banned ?\<span class=\"_4yxo\"\> ?as as? commander only\.? ?\<\/span\>\.?\<\/li\>/;
 
 const BANNED_CARD_REGEXP_G = new RegExp(BANNED_CARD_REGEXP, 'g');
 const BANNED_COMMANDER_REGEXP_G = new RegExp(BANNED_COMMANDER_REGEXP, 'g');
